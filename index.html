@@ -8,9 +8,9 @@
             background-color: black;
             color: white;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
@@ -21,8 +21,8 @@
             border: none;
             padding: 15px 30px;
             font-size: 18px;
-            cursor: pointer;
             border-radius: 5px;
+            cursor: pointer;
         }
         button:hover {
             background-color: darkblue;
@@ -30,7 +30,8 @@
     </style>
     <script>
         function goToMissmo() {
-            window.location.href = window.location.origin + "missmo";
+            // Use relative path for GitHub Pages deployment
+            window.location.href = "./missmo/";
         }
     </script>
 </head>
