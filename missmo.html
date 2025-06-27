@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Miss Mo?</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin-bottom: 40px;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .yes {
+            background-color: green;
+            color: white;
+        }
+        .no {
+            background-color: red;
+            color: white;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        #video-container {
+            display: none;
+            margin-top: 20px;
+        }
+        video {
+            width: 80%;
+            max-width: 600px;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function showVideo() {
+            // Hide title and buttons
+            document.querySelector('h1').style.display = 'none';
+            document.querySelector('.buttons').style.display = 'none';
+            // Show video container
+            document.getElementById('video-container').style.display = 'block';
+        }
+
+        function goBackOrExit() {
+            if (window.history.length > 1) {
+                history.back();
+            } else {
+                window.close();
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Miss Mo?</h1>
+    <div class="buttons">
+        <button class="yes" onclick="showVideo()">OO</button>
+        <button class="no" onclick="goBackOrExit()">HINDI</button>
+    </div>
+
+    <div id="video-container">
+        <video controls>
+            <source src="https://cdn.discordapp.com/attachments/1314299378428542988/1388088129046708301/Roblox-2025-06-27T09_19_45.602Z_-_Trim.mp4?ex=685fb54f&is=685e63cf&hm=9a3afda258a292bbd53f330dc4f6099ef4e64fa8e1457fdec8ed4ef835f3e340&" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</body>
+</html>
